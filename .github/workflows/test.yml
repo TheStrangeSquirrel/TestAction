@@ -1,7 +1,7 @@
 name: test CI
 
 env:  
-  TEST_SECRET: ${{ TEST_SECRET }}
+  TEST_SECRET: ${{ secrets.TEST_SECRET }}
 
 # Controls when the workflow will run
 on:
