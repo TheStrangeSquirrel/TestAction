@@ -45,17 +45,18 @@ jobs:
         run: echo Hello, world!3
 
       - name: Force Failure
+        continue-on-error: true
         run: exit 1
 
       - name: Search problems-report
-        if: always ()
+        # if: always ()
         run: |
          echo "Current path: $PWD"
          echo "We are looking for the file"
          find . -name test.txt || echo "File not found"
 
       - name: Save test file
-        if: always ()
+        # if: always ()
         uses: actions/upload-artifact@v4
         with:
            name: test
