@@ -37,7 +37,9 @@ jobs:
           echo test, and deploy your project.
 
       - name: Create text file
-        run: echo "Test secret:${MAPS_API_KEY}" >> testf/test.txt
+        run: |
+          mkdir test_folder
+          echo "Test secret:${MAPS_API_KEY}" >> test_folder/test.txt
  
       - name: Run a one-line script 3
         run: echo Hello, world!3
