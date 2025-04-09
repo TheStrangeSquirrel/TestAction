@@ -44,6 +44,9 @@ jobs:
       - name: Run a one-line script 3
         run: echo Hello, world!3
 
+      - name: Force Failure
+        run: exit 1
+
       - name: Search problems-report
         if: always ()
         run: |
@@ -51,7 +54,7 @@ jobs:
          echo "We are looking for the file"
          find . -name test.txt || echo "File not found"
 
-      - name: Save blackduck-problems-report file
+      - name: Save test file
         if: always ()
         uses: actions/upload-artifact@v4
         with:
