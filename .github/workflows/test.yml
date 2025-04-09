@@ -39,7 +39,7 @@ jobs:
       - name: Create text file
         run: |
           mkdir test_folder
-          echo "Test secret:${MAPS_API_KEY}" >> test_folder/test.txt
+          echo "Test secret:${TEST_SECRET}" >> test_folder/test.txt
  
       - name: Run a one-line script 3
         run: echo Hello, world!3
