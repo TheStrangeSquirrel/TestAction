@@ -73,3 +73,10 @@ jobs:
 
       - name: Run a one-line script build2
         run: echo Hello, world! build2
+
+      - name: Search file
+        if: always()
+        run: |
+            echo "Current path: $PWD"
+            echo "We are looking for the file"
+            find . -name *.yml || echo "File not found"
